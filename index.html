@@ -1,112 +1,199 @@
 <!DOCTYPE html>
 <html lang="my">
 <head>
-    <meta charset="UTF-8">
-    <title>VPN Online Shop</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            margin: 0;
-        }
-        header {
-            background: #1e88e5;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 10px;
-        }
-        .product, .payment {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-        .price {
-            color: green;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .btn {
-            display: inline-block;
-            margin: 5px 5px 0 0;
-            padding: 10px 15px;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .fb { background: #1877f2; }
-        .tg { background: #0088cc; }
-        .vb { background: #7360f2; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPN Online Shop</title>
 
-        .payment img {
-            width: 200px;
-            margin: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-    </style>
+<style>
+:root{
+  --bg:#f2f4f8;
+  --card:#ffffff;
+  --text:#111827;
+  --sub:#4b5563;
+}
+body.dark{
+  --bg:#0f172a;
+  --card:#1e293b;
+  --text:#f9fafb;
+  --sub:#cbd5f5;
+}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:.3s;
+}
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:15px;
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.toggle{
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#2563eb;
+  color:#fff;
+  cursor:pointer;
+  font-weight:bold;
+}
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+.product{
+  background:var(--card);
+  border-radius:12px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 6px 15px rgba(0,0,0,.15);
+}
+.price{
+  color:#ef4444;
+  font-size:20px;
+  font-weight:bold;
+}
+.buy-btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:12px 20px;
+  background:#22c55e;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
+.section{
+  background:var(--card);
+  margin-top:25px;
+  padding:20px;
+  border-radius:12px;
+}
+.qr-box{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  text-align:center;
+}
+.qr-box img{
+  width:180px;
+  border-radius:10px;
+  border:1px solid #64748b;
+}
+.contact a{
+  display:block;
+  margin:10px 0;
+  padding:14px;
+  text-align:center;
+  color:#fff;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+}
+.facebook{background:#1877f2;}
+.telegram{background:#0088cc;}
+.viber{background:#7360f2;}
+
+footer{
+  text-align:center;
+  margin:25px 0;
+  color:var(--sub);
+}
+</style>
 </head>
+
 <body>
-
-<header>
-    <h1>VPN Online Shop</h1>
-    <p>Myanmar For V2ray </p>
-</header>
-
 <div class="container">
 
-    <!-- PRODUCTS -->
-    <div class="product">
-        <h2>75GB VPN - 1 Month</h2>
-        <p class="price">3000 Ks</p>
-        <a class="btn fb" href="https://www.facebook.com/yawlawt2431">Facebook</a>
-        <a class="btn tg" href="https://t.me/aungaung78">Telegram</a>
-        <a class="btn vb" href="viber://chat?number=959xxxxxxxx">Viber</a>
+<header>
+  <h1>YT VPN Online Shop</h1>
+  <button class="toggle" onclick="toggleDark()">🌙 Dark Mode</button>
+</header>
+
+<div class="products">
+  <div class="product">
+    <h3>75GB </h3>
+    <p>အသုံးပြုနိုင်ချိန် – ၁ လ</p>
+    <div class="price">3000 ကျပ်</div>
+    <a class="buy-btn" href="https://m.me/yawlawt2431" target="_blank">အခုပဲ ဝယ်မယ်</a>
+  </div>
+
+  <div class="product">
+    <h3>100GB </h3>
+    <p>အသုံးပြုနိုင်ချိန် – ၁ လ</p>
+    <div class="price">4000 ကျပ်</div>
+    <a class="buy-btn" href="https://m.me/yawlawt2431" target="_blank">အခုပဲ ဝယ်မယ်</a>
+  </div>
+
+  <div class="product">
+    <h3>150GB </h3>
+    <p>အသုံးပြုနိုင်ချိန် – ၁ လ</p>
+    <div class="price">5000 ကျပ်</div>
+    <a class="buy-btn" href="https://m.me/yawlawt2431" target="_blank">အခုပဲ ဝယ်မယ်</a>
+  </div>
+
+  <div class="product">
+    <h3>Unlimited </h3>
+    <p>၁ လ / Device ၁ လုံး</p>
+    <div class="price">6000 ကျပ်</div>
+    <a class="buy-btn" href="https://m.me/yawlawt2431" target="_blank">အခုပဲ ဝယ်မယ်</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2>ငွေပေးချေမှု (QR Code)</h2>
+  <p>ငွေပေးချေပြီးပါက Screenshot ပို့ပေးပါနော်</p>
+  <div class="qr-box">
+    <div>
+      <h3>KBZPay</h3>
+      <img src="https://raw.githubusercontent.com/yawyaw456/vpn-online-shop/refs/heads/main/kpay.png" alt="KBZPay QR">
     </div>
-
-    <div class="product">
-        <h2>100GB VPN - 1 Month</h2>
-        <p class="price">4000 Ks</p>
-        <a class="btn fb" href="https://www.facebook.com/yawlawt2431">Facebook</a>
-        <a class="btn tg" href="https://t.me/aungaung78">Telegram</a>
-        <a class="btn vb" href="viber://chat?number=66947688246">Viber</a>
+    <div>
+      <h3>WavePay</h3>
+      <img src="https://raw.githubusercontent.com/yawyaw456/vpn-online-shop/refs/heads/main/wave-pay.png" alt="WavePay QR">
     </div>
+  </div>
+</div>
 
-    <div class="product">
-        <h2>150GB VPN - 1 Month</h2>
-        <p class="price">5000 Ks</p>
-        <a class="btn fb" href="https://www.facebook.com/yawlawt2431">Facebook</a>
-        <a class="btn tg" href="https://t.me/aungaung78">Telegram</a>
-        <a class="btn vb" href="viber://chat?number=66947688246">Viber</a>
-    </div>
+<div class="section contact">
+  <h2>ဆက်သွယ်ရန်</h2>
 
-    <div class="product">
-        <h2>Unlimited VPN (1 Device) - 1 Month</h2>
-        <p class="price">6000 Ks</p>
-        <a class="btn fb" href="https://www.facebook.com/yawlawt2431">Facebook</a>
-        <a class="btn tg" href="https://t.me/aungaung78">Telegram</a>
-        <a class="btn vb" href="viber://chat?number=66947688246">Viber</a>
-    </div>
+  <!-- Facebook Page Link -->
+  <a href="https://www.facebook.com/yawlawt2431" target="_blank" class="facebook">
+    Facebook Page
+  </a>
 
-    <!-- PAYMENT SECTION -->
-    <div class="payment">
-        <h2>Payment Method</h2>
-        <p>ငွေလွှဲပြီး Screenshot ကို Chat မှာ ပို့ပေးပါ</p>
+  <!-- Telegram Username or Channel -->
+  <a href="https://t.me/aungaung78" target="_blank" class="telegram">
+    Telegram
+  </a>
 
-        <h3>WavePay</h3>
-        <img src="https://raw.githubusercontent.com/yawyaw456/vpn-online-shop/refs/heads/main/wave-pay.png" alt="WavePay QR">
+  <!-- Viber Phone -->
+  <a href="viber://chat?number=66947688246" class="viber">
+    Viber
+  </a>
+</div>
 
-        <h3>KBZPay</h3>
-        <img src="https://raw.githubusercontent.com/yawyaw456/vpn-online-shop/refs/heads/main/kpay.png" alt="KBZPay QR">
-    </div>
+<footer>
+© 2026 VPN Online Shop | အားလုံးအခွင့်အရေးသိမ်းဆည်းထားသည်
+</footer>
 
 </div>
+
+<script>
+function toggleDark(){
+  document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
