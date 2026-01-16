@@ -3,110 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VPN Online Shop</title>
+<title>YT VPN Online Shop</title>
 
 <style>
 :root{
-  --bg:#f2f4f8;
-  --card:#ffffff;
-  --text:#111827;
-  --sub:#4b5563;
+  --bg:#f1f5f9;
+  --card:rgba(255,255,255,.75);
+  --text:#0f172a;
+  --sub:#475569;
+  --primary:#2563eb;
+  --success:#22c55e;
+  --danger:#ef4444;
+  --blur:blur(14px);
 }
 body.dark{
-  --bg:#0f172a;
-  --card:#1e293b;
-  --text:#f9fafb;
-  --sub:#cbd5f5;
+  --bg:#020617;
+  --card:rgba(30,41,59,.7);
+  --text:#f8fafc;
+  --sub:#cbd5e1;
 }
+
+*{box-sizing:border-box}
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:var(--bg);
+  font-family:"Segoe UI",Arial,sans-serif;
+  background:linear-gradient(135deg,#1e3a8a,#0f172a);
+  background-attachment:fixed;
   color:var(--text);
   transition:.3s;
 }
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:15px;
+body.dark{
+  background:linear-gradient(135deg,#020617,#020617);
 }
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
 header{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  margin-bottom:20px;
 }
+
+header h1{
+  margin:0;
+  font-size:26px;
+  background:linear-gradient(90deg,#60a5fa,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
 .toggle{
-  padding:8px 16px;
+  padding:10px 18px;
   border:none;
-  border-radius:20px;
-  background:#2563eb;
+  border-radius:30px;
+  background:linear-gradient(90deg,#2563eb,#3b82f6);
   color:#fff;
   cursor:pointer;
   font-weight:bold;
 }
+
 .products{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:15px;
-  margin-top:20px;
+  gap:18px;
 }
+
 .product{
   background:var(--card);
-  border-radius:12px;
-  padding:20px;
+  backdrop-filter:var(--blur);
+  border-radius:18px;
+  padding:22px;
   text-align:center;
-  box-shadow:0 6px 15px rgba(0,0,0,.15);
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  transition:.3s;
 }
+.product:hover{
+  transform:translateY(-6px) scale(1.02);
+}
+
+.product h3{
+  margin:0;
+  font-size:22px;
+}
+
+.product p{
+  margin:8px 0;
+  color:var(--sub);
+}
+
 .price{
-  color:#ef4444;
-  font-size:20px;
+  font-size:22px;
   font-weight:bold;
+  color:var(--danger);
+  margin-top:6px;
 }
+
 .buy-btn{
   display:inline-block;
-  margin-top:12px;
-  padding:12px 20px;
-  background:#22c55e;
+  margin-top:14px;
+  padding:14px 22px;
+  background:linear-gradient(90deg,#22c55e,#16a34a);
   color:#fff;
   text-decoration:none;
-  border-radius:8px;
+  border-radius:14px;
   font-weight:bold;
+  transition:.25s;
 }
+.buy-btn:hover{
+  transform:scale(1.05);
+}
+
 .section{
+  margin-top:35px;
   background:var(--card);
-  margin-top:25px;
-  padding:20px;
-  border-radius:12px;
+  backdrop-filter:var(--blur);
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
 }
+
+.section h2{
+  margin-top:0;
+}
+
 .qr-box{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:20px;
   text-align:center;
+  margin-top:15px;
 }
+
 .qr-box img{
-  width:180px;
-  border-radius:10px;
-  border:1px solid #64748b;
+  width:170px;
+  border-radius:14px;
+  background:#fff;
+  padding:8px;
 }
+
 .contact a{
   display:block;
-  margin:10px 0;
-  padding:14px;
+  margin:12px 0;
+  padding:16px;
   text-align:center;
   color:#fff;
   text-decoration:none;
-  border-radius:10px;
+  border-radius:14px;
   font-weight:bold;
+  transition:.25s;
 }
-.facebook{background:#1877f2;}
-.telegram{background:#0088cc;}
-.viber{background:#7360f2;}
+.contact a:hover{
+  transform:scale(1.04);
+}
+
+.facebook{background:linear-gradient(90deg,#1877f2,#2563eb);}
+.telegram{background:linear-gradient(90deg,#0088cc,#0ea5e9);}
+.viber{background:linear-gradient(90deg,#7360f2,#8b5cf6);}
 
 footer{
   text-align:center;
-  margin:25px 0;
+  margin:30px 0 10px;
   color:var(--sub);
+  font-size:14px;
 }
 </style>
 </head>
@@ -158,44 +221,33 @@ footer{
 
 <div class="section">
   <h2>ငွေပေးချေမှု (QR Code)</h2>
-  <p>ငွေပေးချေပြီးပါက Screenshot ပို့ပေးပါနော်</p>
+  <p>ငွေပေးချေပြီး Screenshot ပို့ပေးပါနော်</p>
 
   <div class="qr-box">
     <div>
       <h3>KBZPay</h3>
-      <img src="https://raw.githubusercontent.com/yawyaw456/vpn-online-shop/refs/heads/main/kpay.png" alt="KBZPay QR">
+      <img src="https://raw.githubusercontent.com/yawyaw456/vpn-online-shop/refs/heads/main/kpay.png">
     </div>
-
     <div>
       <h3>WavePay</h3>
-      <img src="https://raw.githubusercontent.com/yawyaw456/vpn-online-shop/refs/heads/main/wave-pay.png" alt="WavePay QR">
+      <img src="https://raw.githubusercontent.com/yawyaw456/vpn-online-shop/refs/heads/main/wave-pay.png">
     </div>
-
     <div>
       <h3>K Plus</h3>
-      <img src="https://raw.githubusercontent.com/yawyaw456/vpn-online-shop/refs/heads/main/kplus.png" alt="AYA Pay QR">
+      <img src="https://raw.githubusercontent.com/yawyaw456/vpn-online-shop/refs/heads/main/kplus.png">
     </div>
   </div>
 </div>
 
 <div class="section contact">
   <h2>ဆက်သွယ်ရန်</h2>
-
-  <a href="https://www.facebook.com/yawlawt2431" target="_blank" class="facebook">
-    Facebook Page
-  </a>
-
-  <a href="https://t.me/aungaung78" target="_blank" class="telegram">
-    Telegram
-  </a>
-
-  <a href="viber://chat?number=66947688246" class="viber">
-    Viber
-  </a>
+  <a href="https://www.facebook.com/yawlawt2431" target="_blank" class="facebook">Facebook Page</a>
+  <a href="https://t.me/aungaung78" target="_blank" class="telegram">Telegram</a>
+  <a href="viber://chat?number=66947688246" class="viber">Viber</a>
 </div>
 
 <footer>
-© 2026 VPN Online Shop | အားလုံးအခွင့်အရေးသိမ်းဆည်းထားသည်
+© 2026 VPN Online Shop | All Rights Reserved
 </footer>
 
 </div>
@@ -205,6 +257,5 @@ function toggleDark(){
   document.body.classList.toggle("dark");
 }
 </script>
-
 </body>
 </html>
