@@ -47,6 +47,15 @@ header{
   justify-content:space-between;
   align-items:center;
   margin-bottom:20px;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+/* LOGO AREA */
+.logo-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
 }
 
 header h1{
@@ -55,6 +64,23 @@ header h1{
   background:linear-gradient(90deg,#60a5fa,#22c55e);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
+}
+
+/* SERVER BADGES */
+.servers{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.server-badge{
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+  color:#fff;
+  background:linear-gradient(90deg,#22c55e,#16a34a);
+  box-shadow:0 6px 14px rgba(0,0,0,.25);
 }
 
 .toggle{
@@ -178,7 +204,14 @@ footer{
 <div class="container">
 
 <header>
-  <h1>YT VPN Online Shop</h1>
+  <div class="logo-wrap">
+    <h1>YT VPN Online Shop</h1>
+    <div class="servers">
+      <div class="server-badge">🇸🇬 Singapore Server</div>
+      <div class="server-badge">🇹🇭 Thailand Server</div>
+    </div>
+  </div>
+
   <button class="toggle" onclick="toggleDark()">🌙 Dark Mode</button>
 </header>
 
@@ -217,8 +250,8 @@ footer{
     <div class="price">60 Baht</div>
     <a class="buy-btn" href="https://m.me/yawlawt2431" target="_blank">အခုပဲ ဝယ်မယ်</a>
   </div>
-  
-    <div class="product">
+
+  <div class="product">
     <h3>Zivpn (Jaidee)</h3>
     <p>၁ လ / Device ၁ လုံး</p>
     <div class="price">50 Baht</div>
